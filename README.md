@@ -21,7 +21,7 @@ TaskForge is a modern, web‑based Task Management System built on CodeIgniter 4
   - Easily add or customize statuses without code changes  
 
 **2. UI/UX**  
-- **Responsive Design** with Bootstrap 5 for desktop & mobile  
+- **Responsive Design** with Bootstrap for desktop & mobile  
 - **Interactive Elements** via JavaScript & jQuery (e.g., drag‑and‑drop)  
 
 **3. Extensibility & Future Enhancements**  
@@ -68,55 +68,52 @@ Before you begin, ensure you have:
 ## Installation
 
 1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/yourusername/TaskForge.git
+   git clone https://github.com/yourusername/TaskForge.git  
    cd TaskForge
 
-Import the database:
+2. **Import the Database**  
+   # Open phpMyAdmin at http://localhost/phpmyadmin  
+   # Create a new database named taskforge  
+   # Go to Import, choose taskforge.sql, and click Go
 
-Open phpMyAdmin (http://localhost/phpmyadmin)
-Create a new database named taskforge
-Go to Import, choose database/taskforge.sql, and click Go
+3. **Configure Environment**  
+   cp env .env  
+   # Edit .env:  
+   # app.baseURL = 'http://localhost/TaskForge/public/'  
+   # database.default.database = taskforge  
+   # database.default.username = root  
+   # database.default.password =
 
-Configure environment:
+4. **Install PHP Dependencies**  
+   composer install
 
-Copy env file:
-cp env .env
-Open .env, set your base URL and database credentials:
-
-ini
-app.baseURL = 'http://localhost/TaskForge/public/'
-database.default.database = taskforge
-database.default.username = root
-database.default.password =
-
-Install PHP dependencies
-composer install
-Serve the application locally
-
-php spark serve
-Visit http://localhost:8080 in your browser.
+5. **Serve the Application Locally**  
+   php spark serve  
+   # Visit http://localhost:8080 in your browser
 
 ---
 
 ## Usage
 
-Register a new account at /auth/register.
-Log in at /auth/login.
-Dashboard:
-Admins manage users & all tasks
-Managers create/assign tasks and view team progress
-Employees update the status of tasks assigned to them
-Task Operations:
-Add: click “Add New Task”
-Edit: click the edit button (modal form)
-Delete: click the delete button, confirm removal
-Search: type in the search box for live suggestions
-Logout via the “Logout” button in the header.
+# Register a new account at /auth/register  
+# Log in at /auth/login  
+
+# Dashboard Roles:  
+#   Admins   – manage users & all tasks  
+#   Managers – create/assign tasks & view team progress  
+#   Employees– update status of assigned tasks  
+
+# Task Operations:  
+#   Add    – click “Add New Task”  
+#   Edit   – click the edit button (modal form)  
+#   Delete – click the delete button, confirm removal  
+#   Search – type in the search box for live suggestions  
+
+# Logout via the “Logout” button in the header
 
 ---
 
 ## License
-This project is released under the MIT License.
 
----
+This project is released under the MIT License
+
