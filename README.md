@@ -37,7 +37,6 @@ TaskForge is a modern, web‑based Task Management System built on CodeIgniter 4
 - [Requirements](#requirements)  
 - [Installation](#installation)  
 - [Usage](#usage)  
-- [License](#license)  
 
 ---
 
@@ -68,28 +67,29 @@ Before you begin, ensure you have:
 ## Installation
 
 1. **Clone the repository**  
-- git clone https://github.com/yourusername/TaskForge.git  
-- cd TaskForge
+   git clone https://github.com/yourusername/TaskForge.git  
+   cd TaskForge
 
 2. **Import the Database**  
-   - Open phpMyAdmin at http://localhost/phpmyadmin  
-   - Create a new database named taskforge  
-   - Go to Import, choose taskforge.sql, and click Go
+   Open phpMyAdmin at http://localhost/phpmyadmin  
+   Create a new database named taskforge  
+   Go to Import, choose taskforge.sql, and click Go
 
 3. **Configure Environment**  
-   cp env .env  
+   cp env .env
+    
    Edit .env:  
    app.baseURL = 'http://localhost/TaskForge/public/'  
    database.default.database = taskforge  
    database.default.username = root  
    database.default.password =
 
-4. **Install PHP Dependencies**  
+5. **Install PHP Dependencies**  
    composer install
 
-5. **Serve the Application Locally**  
+6. **Serve the Application Locally**  
    php spark serve  
-   - **Visit http://localhost:8080 in your browser**
+   Visit http://localhost:8080 in your browser
 
 ---
 
@@ -113,7 +113,5 @@ Before you begin, ensure you have:
 
 ---
 
-## License
 
-This project is released under the MIT License
 
